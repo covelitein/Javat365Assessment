@@ -9,6 +9,7 @@ import { z } from "zod";
 import { FaArrowRight, FaTimes, FaSignInAlt } from "react-icons/fa";
 import { Input } from "../components";
 import { signIn } from "next-auth/react";
+import Link from "next/link";
 
 export default function SignInForm() {
   const router = useRouter();
@@ -142,6 +143,9 @@ export default function SignInForm() {
             <FaArrowRight className="text-xl" />
           </button>
         </form>
+        <div className="mt-5 text-sm flex items-center flex-wrap gap-1">
+          Dont have an account? <Link href={'/auth/signup'} className="text-blue-500 underline">Create an account</Link>
+        </div>
       </div>
     </div>
   );

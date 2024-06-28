@@ -9,6 +9,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { signUpSchema } from "../schemaValidations";
 import api from "../constants";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function SignUpForm() {
   const router = useRouter();
@@ -144,6 +145,12 @@ export default function SignUpForm() {
             <FaArrowRight className="text-xl" />
           </button>
         </form>
+        <div className="mt-5 text-sm flex items-center flex-wrap gap-1">
+          Already have an account?{" "}
+          <Link href={"/auth/signin"} className="text-blue-500 underline">
+            sign in
+          </Link>
+        </div>
       </div>
     </div>
   );
