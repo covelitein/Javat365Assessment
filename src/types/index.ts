@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { Control } from "react-hook-form";
 
 export type InputProp = {
@@ -29,3 +30,7 @@ export type User = {
   email: string;
   password: string;
 };
+
+export interface Props {
+  children: ReactNode;
+}
