@@ -2,12 +2,10 @@ import  { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { compare } from "bcrypt";
 import prisma from "../server";
-import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { User } from "../types";
 
 
 export const authOptions: NextAuthOptions = {
-  // adapter: PrismaAdapter(prisma),
   providers: [
     CredentialsProvider({
       type: "credentials",
@@ -44,10 +42,6 @@ export const authOptions: NextAuthOptions = {
       },
     }),
   ],
-
-  pages: {
-    signIn: "/login",
-  },
 
   session: { strategy: "jwt" },
   debug: process.env.NODE_ENV == "development",
