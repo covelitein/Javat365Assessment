@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import { Control, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { signInSchema } from "../schemaValidations";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
