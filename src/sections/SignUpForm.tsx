@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { FaUserCircle, FaArrowRight, FaTimes } from "react-icons/fa";
-import { Input } from "../components";
+import { RegisterInput } from "@/components";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -104,9 +104,8 @@ export default function SignUpForm() {
 
       <div className="px-5 mt-10">
         <form onSubmit={form.handleSubmit(submit)}>
-          <Input
+          <RegisterInput
             label="Full Name"
-            formType="register"
             control={form.control}
             error={form.formState.errors.fullName?.message}
             type="text"
@@ -114,9 +113,8 @@ export default function SignUpForm() {
             className="mb-5"
             inputClassName="border-b-2 py-2 px-2 border-gray-300 w-full focus:ring-0 focus:outline-none"
           />
-          <Input
+          <RegisterInput
             label="E-mail"
-            formType="register"
             control={form.control}
             error={form.formState.errors.email?.message}
             type="text"
@@ -124,9 +122,8 @@ export default function SignUpForm() {
             className="mb-5"
             inputClassName="border-b-2 py-2 px-2 border-gray-300 w-full focus:ring-0 focus:outline-none"
           />
-          <Input
+          <RegisterInput
             label="Password"
-            formType="register"
             control={form.control}
             error={form.formState.errors.password?.message}
             type="password"

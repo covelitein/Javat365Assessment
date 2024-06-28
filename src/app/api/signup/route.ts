@@ -1,5 +1,5 @@
-import { signUpSchema } from "@//schemaValidations";
-import prisma from "@//server";
+import { signUpSchema } from "@/schemaValidations";
+import prisma from "@/server";
 import { NextResponse } from "next/server";
 import bcrypt from "bcrypt";
 import { SignUpBody } from "@//types";

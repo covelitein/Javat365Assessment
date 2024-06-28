@@ -7,7 +7,7 @@ import { signInSchema } from "../schemaValidations";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { FaArrowRight, FaTimes, FaSignInAlt } from "react-icons/fa";
-import { Input } from "../components";
+import { LoginInput } from "../components";
 import { signIn } from "next-auth/react";
 import Link from "next/link";
 
@@ -112,9 +112,8 @@ export default function SignInForm() {
 
       <div className="px-5 mt-10">
         <form onSubmit={form.handleSubmit(submit)}>
-          <Input
+          <LoginInput
             label="E-mail"
-            formType="login"
             control={form.control}
             error={form.formState.errors.email?.message}
             type="text"
@@ -122,9 +121,8 @@ export default function SignInForm() {
             className="mb-5"
             inputClassName="border-b-2 py-2 px-2 border-gray-300 w-full focus:ring-0 focus:outline-none"
           />
-          <Input
+          <LoginInput
             label="Password"
-            formType="login"
             control={form.control}
             error={form.formState.errors.password?.message}
             type="password"

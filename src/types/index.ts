@@ -6,18 +6,19 @@ export type InputProp = {
   error: string | undefined;
   className: string;
   inputClassName: string;
-  control: any;
+  control: Control<{ fullName: string; email: string; password: string }>;
   type: string;
   label: string;
-  formType: string;
 };
 
-export type RegisterFieldValues = {
-  control: Control<{ fullName: string; email: string; password: string }>;
-};
-
-export type LoginFieldValues = {
-  control: Control<{ fullName: string; email: string; password: string }>;
+export type LoginInputProp = {
+  name: "email" | "password";
+  error: string | undefined;
+  className: string;
+  inputClassName: string;
+  control: Control<{ email: string; password: string }>;
+  type: string;
+  label: string;
 };
 
 export interface SignUpBody {

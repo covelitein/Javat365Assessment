@@ -1,5 +1,7 @@
-import Input from './Input'
+import RegisterInput from './RegisterInput'
+import LoginInput from './LoginInput'
 
 export {
-    Input
+    RegisterInput,
+    LoginInput
 }

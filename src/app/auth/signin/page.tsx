@@ -1,4 +1,4 @@
-import { SignInForm } from '@//sections'
+import { SignInForm } from '@/sections'
 import React from 'react'
 
 export default function SignIn() {

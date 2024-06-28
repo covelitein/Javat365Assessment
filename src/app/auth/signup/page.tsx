@@ -1,5 +1,5 @@
 
-import { SignUpForm } from '@//sections'
+import { SignUpForm } from '@/sections'
 import React from 'react'
 
 export default function SignUp() {

@@ -1,5 +1,5 @@
 import React from "react";
-import { Profile } from "@//sections";
+import { Profile } from "@/sections";
 
 export default function ProfilePage() {
   return (
